@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -132,3 +132,6 @@ AWS_ACCESS_KEY_ID = 'access_key'
 AWS_SECRET_ACCESS_KEY = 'secret_key'
 AWS_STORAGE_BUCKET_NAME = 'bucket_name'
 AWS_S3_REGION_NAME = 'region'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
