@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-606sx0x*%zoob8n3dnio*i1%^lzrhb*vzm^_8kt!lwj%&sj*u0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,13 +125,13 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CELERY_BROKER_URL = 'url'
-CELERY_RESULT_BACKEND = 'url'
 
 # AWS S3 settings
 AWS_ACCESS_KEY_ID = 'access_key'
 AWS_SECRET_ACCESS_KEY = 'secret_key'
 AWS_STORAGE_BUCKET_NAME = 'bucket_name'
 AWS_S3_REGION_NAME = 'region'
+AWS_S3_CUSTOM_DOMAIN = 'custom_domain'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
