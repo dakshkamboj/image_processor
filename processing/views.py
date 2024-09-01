@@ -20,7 +20,10 @@ class UploadView(APIView):
         if not file:
             return Response({"error": "CSV file is required"}, status=status.HTTP_400_BAD_REQUEST)
         
-        validate_csv_file(file)
+        try:
+            validate_csv_file(file)
+        except Exception as e:
+            return Response({"error": f"{str(e)}"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Generate a unique request ID
         request_id = str(uuid.uuid4())
