@@ -31,6 +31,7 @@ This Django-based application processes image data provided via a CSV file. The 
 
 1. **Clone the Repository**:
 
+  #### Update settings file bukcet name and broker_url according to setup
    ```bash
    git clone https://github.com/dakshkamboj/image_processor.git
    cd image-processor
