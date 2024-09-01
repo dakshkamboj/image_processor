@@ -38,13 +38,14 @@ This Django-based application processes image data provided via a CSV file. The 
    python3 manage.py makemigrations
    python3 manage.py migrate
    python3 manage.py runserver IP:PORT
+  ```
 
-Curl for upload API:
-Change the file location accordingly and path according to OS (This request is of local windows)
+## Curl for upload API:
+### Change the file location accordingly and path according to OS (This request is of local windows)
 
 curl -X POST -F "file=@C://Users//Daksh//OneDrive//Desktop//test.csv" -F "webhook_url=https://your-webhook-url.com/endpoint" http://54.82.229.250:8000/api/upload
 
-Curl for getting status:
-Change request-id as per above API response
+## Curl for getting status:
+### Change request-id as per above API response
 
 curl -X GET http://54.82.229.250:8000/api/status/0e9ef6ea-7318-415d-ac4a-9233da6d7d5b
