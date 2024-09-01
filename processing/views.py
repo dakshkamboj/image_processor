@@ -15,7 +15,7 @@ from django.core.exceptions import ValidationError
 class UploadView(APIView):
     def post(self, request, format=None):
         file = request.FILES.get('file')
-        webhook_url = request.data.get('webhook_url')
+        webhook_url = request.POST.get('webhook_url')
 
         if not file:
             return Response({"error": "CSV file is required"}, status=status.HTTP_400_BAD_REQUEST)
