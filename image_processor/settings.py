@@ -127,8 +127,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CELERY_BROKER_URL = 'url'
 
 # AWS S3 settings
-AWS_ACCESS_KEY_ID = 'access_key'
-AWS_SECRET_ACCESS_KEY = 'secret_key'
 AWS_STORAGE_BUCKET_NAME = 'bucket_name'
 AWS_S3_REGION_NAME = 'region'
 AWS_S3_CUSTOM_DOMAIN = 'custom_domain'
